@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Mall - Shops</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Shopping Mall Management</h1>
+<nav>
+    <a href="shops.html">Shops</a>
+    <a href="products.html">Products</a>
+    <a href="customers.html">Customers</a>
+    <a href="billing.html">Billing</a>
+    <a href="#" id="logoutBtn">Logout</a>
+</nav>
+
+<h2>Add New Shop</h2>
+<form id="shopForm">
+    <input type="text" id="name" placeholder="Shop Name" required>
+    <input type="text" id="category" placeholder="Category" required>
+    <input type="number" id="floorNumber" placeholder="Floor Number" required>
+    <input type="text" id="ownerName" placeholder="Owner Name" required>
+    <input type="text" id="contact" placeholder="Contact" required>
+    <button type="submit">Add Shop</button>
+</form>
+
+<h2>All Shops</h2>
+<table id="shopsTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Floor</th>
+        <th>Owner</th>
+        <th>Contact</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="shopsTableBody">
+    <!-- Rows will be added here by JavaScript -->
+    </tbody>
+</table>
+
+<script src="js/shops.js"></script>
+
+</body>
+</html>

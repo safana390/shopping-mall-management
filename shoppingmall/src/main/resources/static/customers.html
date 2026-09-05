@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Mall - Customers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Shopping Mall Management</h1>
+<nav>
+    <a href="shops.html">Shops</a>
+    <a href="products.html">Products</a>
+    <a href="customers.html">Customers</a>
+    <a href="billing.html">Billing</a>
+    <a href="#" id="logoutBtn">Logout</a>
+</nav>
+
+
+<h2>Add New Customer</h2>
+<form id="customerForm">
+    <input type="text" id="name" placeholder="Customer Name" required>
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+    <button type="submit">Add Customer</button>
+</form>
+
+<h2>All Customers</h2>
+<table id="customersTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="customersTableBody"></tbody>
+</table>
+
+<script src="js/customers.js"></script>
+</body>
+</html>

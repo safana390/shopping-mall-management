@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Mall - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Shopping Mall Management</h1>
+<nav>
+    <a href="shops.html">Shops</a>
+    <a href="products.html">Products</a>
+    <a href="customers.html">Customers</a>
+    <a href="billing.html">Billing</a>
+    <a href="#" id="logoutBtn">Logout</a>
+</nav>
+
+<h2>Select Shop</h2>
+<select id="shopSelect">
+    <option value="">-- Select a Shop --</option>
+</select>
+
+<h2>Add New Product</h2>
+<form id="productForm">
+    <input type="text" id="name" placeholder="Product Name" required>
+    <input type="number" id="price" placeholder="Price" step="0.01" required>
+    <input type="number" id="stockQty" placeholder="Stock Quantity" required>
+    <button type="submit">Add Product</button>
+</form>
+
+<h2>Products</h2>
+<table id="productsTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="productsTableBody">
+    </tbody>
+</table>
+
+<script src="js/products.js"></script>
+
+</body>
+</html>
