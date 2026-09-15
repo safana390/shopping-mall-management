@@ -1,5 +1,4 @@
-const API_URL = 'http://localhost:8080/api/auth/forgot-password';
-
+const API_URL = '/api/auth/forgot-password';
 document.getElementById('forgotForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 

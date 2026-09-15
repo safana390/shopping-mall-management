@@ -1,5 +1,4 @@
-const API_URL = 'http://localhost:8080/api/shops';
-
+const API_URL = '/api/shops';
 function authHeaders() {
     const token = localStorage.getItem('token');
     return {

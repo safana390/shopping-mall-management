@@ -1,6 +1,6 @@
-const CUSTOMERS_API = 'http://localhost:8080/api/customers';
-const SHOPS_API = 'http://localhost:8080/api/shops';
-const BILLS_API = 'http://localhost:8080/api/bills';
+const CUSTOMERS_API = '/api/customers';
+const SHOPS_API = '/api/shops';
+const BILLS_API = '/api/bills';
 
 let selectedShopId = null;
 let allProducts = [];

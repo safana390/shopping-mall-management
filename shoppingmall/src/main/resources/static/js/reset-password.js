@@ -1,5 +1,4 @@
-const API_URL = 'http://localhost:8080/api/auth/reset-password';
-
+const API_URL = '/api/auth/reset-password';
 // Extract the token from the URL query string, e.g. reset-password.html?token=abc123
 const urlParams = new URLSearchParams(window.location.search);
 const token = urlParams.get('token');

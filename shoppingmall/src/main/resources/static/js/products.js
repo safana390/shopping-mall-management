@@ -1,5 +1,5 @@
-const SHOPS_API = 'http://localhost:8080/api/shops';
-const PRODUCTS_API = 'http://localhost:8080/api/products';
+const SHOPS_API = '/api/shops';
+const PRODUCTS_API = '/api/products';
 
 let selectedShopId = null;
 let allProducts = [];
