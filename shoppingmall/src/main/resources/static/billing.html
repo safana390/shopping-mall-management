@@ -3,38 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Shopping Mall - Billing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Shopping Mall Management</h1>
-
-<nav>
-  <a href="shops.html">Shops</a>
-  <a href="products.html">Products</a>
-  <a href="customers.html">Customers</a>
-  <a href="billing.html">Billing</a>
-  <a href="#" id="logoutBtn">Logout</a>
+<nav class="navbar">
+  <div class="nav-brand"><i class="fa-solid fa-store"></i> MallManager</div>
+  <div class="nav-links">
+    <a href="shops.html"><i class="fa-solid fa-shop"></i> Shops</a>
+    <a href="products.html"><i class="fa-solid fa-box"></i> Products</a>
+    <a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a>
+    <a href="billing.html" class="active"><i class="fa-solid fa-receipt"></i> Billing</a>
+  </div>
+  <a href="#" id="logoutBtn" class="nav-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
 </nav>
+
+<header class="page-banner">
+  <h1>Billing</h1>
+  <p>Create a new bill by selecting a customer, a shop, and the products purchased.</p>
+</header>
 
 <h2>Create Bill</h2>
 
-<label>Customer:</label>
-<select id="customerSelect">
-  <option value="">-- Select Customer --</option>
-</select>
+<div class="field-card">
+  <label>Customer:</label>
+  <select id="customerSelect">
+    <option value="">-- Select Customer --</option>
+  </select>
 
-<label>Shop:</label>
-<select id="shopSelect">
-  <option value="">-- Select Shop --</option>
-</select>
+  <label>Shop:</label>
+  <select id="shopSelect">
+    <option value="">-- Select Shop --</option>
+  </select>
+</div>
 
 <h3>Add Products</h3>
-<select id="productSelect">
-  <option value="">-- Select Product --</option>
-</select>
-<input type="number" id="quantity" placeholder="Quantity" min="1" value="1">
-<button id="addItemBtn">Add to Bill</button>
+
+<div class="field-card inline-row">
+  <select id="productSelect">
+    <option value="">-- Select Product --</option>
+  </select>
+  <input type="number" id="quantity" placeholder="Quantity" min="1" value="1">
+  <button id="addItemBtn">Add to Bill</button>
+</div>
 
 <h3>Bill Items</h3>
 <table id="billItemsTable">
@@ -52,7 +64,9 @@
 
 <h3>Total: ₹<span id="totalAmount">0.00</span></h3>
 
-<button id="submitBillBtn">Generate Bill</button>
+<div class="field-card">
+  <button id="submitBillBtn">Generate Bill</button>
+</div>
 
 <div id="billResult"></div>
 

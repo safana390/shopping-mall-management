@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping Mall - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Shopping Mall Management</h1>
-<nav>
-    <a href="shops.html">Shops</a>
-    <a href="products.html">Products</a>
-    <a href="customers.html">Customers</a>
-    <a href="billing.html">Billing</a>
-    <a href="#" id="logoutBtn">Logout</a>
+<nav class="navbar">
+    <div class="nav-brand"><i class="fa-solid fa-store"></i> MallManager</div>
+    <div class="nav-links">
+        <a href="shops.html"><i class="fa-solid fa-shop"></i> Shops</a>
+        <a href="products.html" class="active"><i class="fa-solid fa-box"></i> Products</a>
+        <a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a>
+        <a href="billing.html"><i class="fa-solid fa-receipt"></i> Billing</a>
+    </div>
+    <a href="#" id="logoutBtn" class="nav-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
 </nav>
+
+<header class="page-banner">
+    <h1>Products</h1>
+    <p>Browse and manage the product catalog for each shop in your mall.</p>
+</header>
 
 <h2>Select Shop</h2>
 <select id="shopSelect">
