@@ -31,3 +31,17 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         document.getElementById('errorMsg').textContent = 'Error connecting to server';
     }
 });
+const togglePw = document.getElementById('togglePw');
+if (togglePw) {
+    togglePw.addEventListener('click', () => {
+        const pwInput = document.getElementById('password');
+        const icon = togglePw.querySelector('i');
+        if (pwInput.type === 'password') {
+            pwInput.type = 'text';
+            icon.className = 'fa-regular fa-eye-slash';
+        } else {
+            pwInput.type = 'password';
+            icon.className = 'fa-regular fa-eye';
+        }
+    });
+}

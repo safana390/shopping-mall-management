@@ -2,24 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shopping Mall - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="auth-page">
 
-<div class="auth-brand"><i class="fa-solid fa-store"></i> MallManager</div>
-<h2>Login</h2>
+<div class="auth-shell">
+    <aside class="auth-hero">
+        <div class="auth-hero-brand"><i class="fa-solid fa-shop"></i> MallManager</div>
+        <div class="auth-hero-content">
+            <h1>Manage your mall.<br><span>Smarter.</span></h1>
+            <p>Manage stores, tenants, billing and mall operations from one powerful platform.</p>
+            <ul class="auth-features">
+                <li><span class="feat-icon feat-orange"><i class="fa-solid fa-shop"></i></span><div><strong>Store Management</strong><small>Easily manage all stores</small></div></li>
+                <li><span class="feat-icon feat-blue"><i class="fa-solid fa-users"></i></span><div><strong>Customer Management</strong><small>Keep track of every shopper</small></div></li>
+                <li><span class="feat-icon feat-green"><i class="fa-solid fa-receipt"></i></span><div><strong>Billing &amp; Reports</strong><small>Generate bills instantly</small></div></li>
+            </ul>
+        </div>
+        <div class="auth-hero-footer">© 2026 MallManager. All rights reserved.</div>
+    </aside>
 
-<form id="loginForm">
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-</form>
-<p><a href="forgot-password.html">Forgot Password?</a></p>
-<p>Don't have an account? <a href="register.html">Register</a></p>
+    <main class="auth-panel">
+        <div class="auth-card">
+            <h2>Welcome back</h2>
+            <p class="auth-sub">Sign in to your MallManager account</p>
 
-<p id="errorMsg" style="color: red;"></p>
+            <form id="loginForm">
+                <label>Username</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-user leading"></i>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+
+                <label>Password</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-lock leading"></i>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-pw" id="togglePw"><i class="fa-regular fa-eye"></i></button>
+                </div>
+
+                <div class="auth-row-end"><a href="forgot-password.html">Forgot password?</a></div>
+
+                <button type="submit" class="auth-submit">Login <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+
+            <div class="auth-divider"><span>OR</span></div>
+            <p class="auth-alt">Don't have an account? <a href="register.html">Register</a></p>
+            <p id="errorMsg"></p>
+        </div>
+    </main>
+</div>
 
 <script src="js/login.js"></script>
 </body>

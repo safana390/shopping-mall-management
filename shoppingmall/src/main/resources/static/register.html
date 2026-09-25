@@ -2,25 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="auth-page">
 
-<div class="auth-brand"><i class="fa-solid fa-store"></i> MallManager</div>
-<h2>Register</h2>
+<div class="auth-shell">
+    <aside class="auth-hero">
+        <div class="auth-hero-brand"><i class="fa-solid fa-shop"></i> MallManager</div>
+        <div class="auth-hero-content">
+            <h1>Join and manage<br><span>your mall today.</span></h1>
+            <p>Create an admin account to start managing shops, products, customers and billing.</p>
+            <ul class="auth-features">
+                <li><span class="feat-icon feat-orange"><i class="fa-solid fa-shop"></i></span><div><strong>Store Management</strong><small>Easily manage all stores</small></div></li>
+                <li><span class="feat-icon feat-blue"><i class="fa-solid fa-users"></i></span><div><strong>Customer Management</strong><small>Keep track of every shopper</small></div></li>
+                <li><span class="feat-icon feat-green"><i class="fa-solid fa-receipt"></i></span><div><strong>Billing &amp; Reports</strong><small>Generate bills instantly</small></div></li>
+            </ul>
+        </div>
+        <div class="auth-hero-footer">© 2026 MallManager. All rights reserved.</div>
+    </aside>
 
-<form id="registerForm">
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required minlength="6">
-    <input type="email" id="email" placeholder="Email (for password reset)" required>
-    <button type="submit">Register</button>
-</form>
+    <main class="auth-panel">
+        <div class="auth-card">
+            <h2>Create account</h2>
+            <p class="auth-sub">Register a new MallManager admin account</p>
 
-<p id="message"></p>
+            <form id="registerForm">
+                <label>Username</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-user leading"></i>
+                    <input type="text" id="username" placeholder="Choose a username" required>
+                </div>
 
-<p>Already have an account? <a href="login.html">Login</a></p>
+                <label>Email</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-envelope leading"></i>
+                    <input type="email" id="email" placeholder="For password reset" required>
+                </div>
+
+                <label>Password</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-lock leading"></i>
+                    <input type="password" id="password" placeholder="At least 6 characters" required minlength="6">
+                    <button type="button" class="toggle-pw" id="togglePw"><i class="fa-regular fa-eye"></i></button>
+                </div>
+
+                <button type="submit" class="auth-submit" style="margin-top: 20px;">Register <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+
+            <div class="auth-divider"><span>OR</span></div>
+            <p class="auth-alt">Already have an account? <a href="login.html">Login</a></p>
+            <p id="message"></p>
+        </div>
+    </main>
+</div>
 
 <script src="js/register.js"></script>
 </body>
